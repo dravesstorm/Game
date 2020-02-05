@@ -5,6 +5,7 @@ using UnityEngine;
 public class SpawnPlatform : MonoBehaviour
 {
     public GameObject platform;
+
     private float indent = 1f;
     // Start is called before the first frame update
     void Start()
