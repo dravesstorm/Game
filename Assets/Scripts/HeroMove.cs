@@ -13,14 +13,12 @@ public class HeroMove : MonoBehaviour
     private Vector3 direction;
     private float horizontal;
     private Rigidbody2D body;
-    private bool CanJump;
     private bool jump = true;
 
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
         body.fixedAngle = true;
-        CanJump = true;
     }
 
 
@@ -42,15 +40,15 @@ public class HeroMove : MonoBehaviour
         transform.localScale = theScale;
     }
 
-  
-
     void Update()
     {
+
+
         if (Input.GetKey(leftButton)) horizontal = -1;
         else if (Input.GetKey(rightButton)) horizontal = 1; else horizontal = 0;
 
         direction = new Vector2(horizontal, 0);
-       // if(body.(GameObject.FindWithTag("staticPlatform"))) CanJump = true;
-        if (horizontal > 0 && !isFacingRight ) Flip(); else if (horizontal < 0 && isFacingRight) Flip();
+
+        if (horizontal > 0 && !isFacingRight) Flip(); else if (horizontal < 0 && isFacingRight) Flip();
     }
 }
