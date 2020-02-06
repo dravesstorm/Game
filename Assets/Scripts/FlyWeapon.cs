@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FlyObj : MonoBehaviour
+public class FlyWeapon : MonoBehaviour
 {
     private Rigidbody2D body;
 
