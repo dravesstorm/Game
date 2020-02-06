@@ -8,29 +8,29 @@ public class HeroMove : MonoBehaviour
     public float addForce;
     public KeyCode leftButton = KeyCode.A;
     public KeyCode rightButton = KeyCode.D;
-    public KeyCode addForceButton = KeyCode.Space;
-    public bool isFacingRight = true;
+    public KeyCode addForceButton = KeyCode.W;
+    public static bool isFacingRight = true;
     private Vector3 direction;
     private float horizontal;
     private Rigidbody2D body;
-    private bool CanJump;
-    private bool jump = true;
+    public static bool canJump;
 
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
         body.fixedAngle = true;
-        CanJump = true;
+        canJump = true;
     }
 
 
     void FixedUpdate()
     {
-        body.AddForce(direction * body.mass * speed);
+        body.AddForce(direction * body.mass * speed/2);
 
-        if (Input.GetKey(addForceButton) && jump)
+        if (Input.GetKey(addForceButton) && canJump)
         {
             body.velocity = new Vector2(0, addForce);
+            canJump = false;
         }
     }
 
@@ -42,15 +42,16 @@ public class HeroMove : MonoBehaviour
         transform.localScale = theScale;
     }
 
-  
 
+    
     void Update()
     {
         if (Input.GetKey(leftButton)) horizontal = -1;
-        else if (Input.GetKey(rightButton)) horizontal = 1; else horizontal = 0;
+             else if (Input.GetKey(rightButton)) horizontal = 1; 
+                     else horizontal = 0;
 
         direction = new Vector2(horizontal, 0);
-       // if(body.(GameObject.FindWithTag("staticPlatform"))) CanJump = true;
-        if (horizontal > 0 && !isFacingRight ) Flip(); else if (horizontal < 0 && isFacingRight) Flip();
+        if (horizontal > 0 && !isFacingRight ) Flip(); 
+            else if (horizontal < 0 && isFacingRight) Flip();
     }
 }

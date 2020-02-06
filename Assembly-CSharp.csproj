@@ -54,8 +54,10 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\CameraMove.cs" />
-     <Compile Include="Assets\Scripts\DelHero.cs" />
+     <Compile Include="Assets\Scripts\FlyWeapon.cs" />
+     <Compile Include="Assets\Scripts\GroundCollis.cs" />
      <Compile Include="Assets\Scripts\HeroMove.cs" />
+     <Compile Include="Assets\Scripts\Shooting.cs" />
      <Compile Include="Assets\Scripts\SpawnPlatform.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>C:/Users/drave/Documents/GitHub/Game/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
