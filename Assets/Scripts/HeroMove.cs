@@ -18,6 +18,7 @@ public class HeroMove : MonoBehaviour
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
+        body.fixedAngle = true;
         canJump = true;
     }
 
