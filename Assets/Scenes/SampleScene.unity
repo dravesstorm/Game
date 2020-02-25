@@ -126,6 +126,8 @@ GameObject:
   - component: {fileID: 482135040}
   - component: {fileID: 482135041}
   - component: {fileID: 482135044}
+  - component: {fileID: 482135045}
+  - component: {fileID: 482135046}
   m_Layer: 0
   m_Name: hero
   m_TagString: Hero
@@ -263,6 +265,44 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shoot: 32
   cookie: {fileID: 2537345456315223714, guid: 4338ca6708d8cbe4b9e67adc7a184d55, type: 3}
+--- !u!61 &482135045
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 482135038}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 13.02, y: 16.01}
+    newSize: {x: 13.02, y: 16.01}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 12, y: 16.01}
+  m_EdgeRadius: 0
+--- !u!114 &482135046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 482135038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6272b55057e5e33409f6349ebb724a4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -276,6 +316,7 @@ GameObject:
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
   - component: {fileID: 519420033}
+  - component: {fileID: 519420034}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -377,3 +418,18 @@ MonoBehaviour:
   groundCollPlatform: {fileID: 7874217973818835682, guid: 42be818518d5e2044a2e21ac85ef985e,
     type: 3}
   enemy: {fileID: 34837536352902900, guid: 7bd6b61d09014634da9068df6eb4f6f8, type: 3}
+--- !u!114 &519420034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea2e63d3d1b9895428ffef4b674024fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MilkPrefab: {fileID: 34837536352902900, guid: 7bd6b61d09014634da9068df6eb4f6f8,
+    type: 3}
+  cookie: {fileID: 482135038}

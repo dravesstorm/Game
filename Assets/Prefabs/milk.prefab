@@ -14,9 +14,11 @@ GameObject:
   - component: {fileID: 6329999282678485070}
   - component: {fileID: 1837862548262938494}
   - component: {fileID: 114557170555133246}
+  - component: {fileID: 114921794314065674}
+  - component: {fileID: 114402171011755518}
   m_Layer: 0
   m_Name: milk
-  m_TagString: Untagged
+  m_TagString: MilkEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,7 +97,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 2
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -148,3 +150,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3243dbe3cf916e4479f22b62f6bfbbe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114921794314065674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34837536352902900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c53a8a274858d1149968240af0c35cc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  power: 2
+--- !u!114 &114402171011755518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34837536352902900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c53a8a274858d1149968240af0c35cc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  power: 2
