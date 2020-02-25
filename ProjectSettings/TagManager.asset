@@ -6,6 +6,8 @@ TagManager:
   tags:
   - staticPlatform
   - Hero
+  - Weapon
+  - MilkEnemy
   layers:
   - Default
   - TransparentFX
