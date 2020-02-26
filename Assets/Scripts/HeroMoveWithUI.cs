@@ -21,8 +21,8 @@ public class HeroMoveWithUI : MonoBehaviour
     void FixedUpdate()
     {
         direction = new Vector2(directionInput, 0);
-        rb2d.AddForce(direction * rb2d.mass * playerSpeed / 2);
-        //rb2d.velocity = new Vector2(playerSpeed * directionInput, rb2d.velocity.y);        
+        //rb2d.AddForce(direction * rb2d.mass * playerSpeed / 2);
+        rb2d.velocity = new Vector2(playerSpeed * directionInput, rb2d.velocity.y);        
     }
 
     public void Move(int InputAxis)
