@@ -4,32 +4,34 @@ using UnityEngine;
 
 public class HeroMove : MonoBehaviour
 {
-    public float speed;
-    public float addForce;
+
+    public Rigidbody2D body;
+    public float playerSpeed;
+    public float jumpPower;
     public KeyCode leftButton = KeyCode.A;
     public KeyCode rightButton = KeyCode.D;
     public KeyCode addForceButton = KeyCode.W;
     public static bool isFacingRight = true;
-    private Vector3 direction;
-    private float horizontal;
-    private Rigidbody2D body;
+    private int directionInput;
+    private Vector2 direction;
     public static bool canJump;
 
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
-        body.fixedAngle = true;
         canJump = true;
     }
 
 
     void FixedUpdate()
     {
-        body.AddForce(direction * body.mass * speed/2);
+        
+        body.AddForce(direction * body.mass * playerSpeed / 2);
+        //body.velocity = new Vector2(playerSpeed * directionInput, body.velocity.y);
 
         if (Input.GetKey(addForceButton) && canJump)
         {
-            body.velocity = new Vector2(0, addForce);
+            body.velocity = new Vector2(body.velocity.x, jumpPower);
             canJump = false;
         }
     }
@@ -37,21 +39,18 @@ public class HeroMove : MonoBehaviour
     void Flip()
     {
         isFacingRight = !isFacingRight;
-        Vector3 theScale = transform.localScale;
+        Vector2 theScale = transform.localScale;
         theScale.x *= -1;
         transform.localScale = theScale;
     }
-
-
-    
+       
     void Update()
     {
-        if (Input.GetKey(leftButton)) horizontal = -1;
-             else if (Input.GetKey(rightButton)) horizontal = 1; 
-                     else horizontal = 0;
-
-        direction = new Vector2(horizontal, 0);
-        if (horizontal > 0 && !isFacingRight ) Flip(); 
-            else if (horizontal < 0 && isFacingRight) Flip();
+        if (Input.GetKey(leftButton)) directionInput = -1;
+        else if (Input.GetKey(rightButton)) directionInput = 1;
+        else directionInput = 0;
+        direction = new Vector2(directionInput, 0);
+        if (directionInput > 0 && !isFacingRight) Flip();
+        else if (directionInput < 0 && isFacingRight) Flip();
     }
 }

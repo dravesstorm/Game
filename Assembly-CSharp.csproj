@@ -64,12 +64,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\CameraMove.cs" />
+    <Compile Include="Assets\Scripts\DestroyCookies.cs" />
     <Compile Include="Assets\Scripts\enemyBehaviour.cs" />
     <Compile Include="Assets\Scripts\enemySpawn.cs" />
     <Compile Include="Assets\Scripts\EnemyTrigger.cs" />
     <Compile Include="Assets\Scripts\FlyWeapon.cs" />
     <Compile Include="Assets\Scripts\GroundCollis.cs" />
     <Compile Include="Assets\Scripts\HeroMove.cs" />
+    <Compile Include="Assets\Scripts\HeroMoveWithUI.cs" />
     <Compile Include="Assets\Scripts\heroTrigger.cs" />
     <Compile Include="Assets\Scripts\Shooting.cs" />
     <Compile Include="Assets\Scripts\SpawnPlatform.cs" />
