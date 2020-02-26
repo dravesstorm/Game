@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4476706384913221125}
   - component: {fileID: 5653437695651183335}
   - component: {fileID: 2100494195520351873}
+  - component: {fileID: 114711223384556840}
   - component: {fileID: 3853575742385362940}
   m_Layer: 0
   m_Name: cookie
@@ -115,6 +116,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &114711223384556840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2537345456315223714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c7f8be13183ecc4782e78d5c8a640f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!58 &3853575742385362940
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -10,5 +10,6 @@ public class GroundCollis : MonoBehaviour
         {
             HeroMove.canJump = true;
         }
+        
     }
 }
