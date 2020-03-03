@@ -7,6 +7,7 @@ public class SpawnPlatform : MonoBehaviour
     public GameObject platform2;
     public GameObject enemy;
     public GameObject platform;
+    public GameObject coin;
     private float indent = 1f;
 
     void Start()
@@ -24,7 +25,8 @@ public class SpawnPlatform : MonoBehaviour
             rnd = Random.Range(0, 10);
             if (rnd == 5)
             {
-                Instantiate(platform, new Vector3(indent * i * 5, 6, 0), Quaternion.identity);
+                Instantiate(platform, new Vector3(indent * i * 5, 5, 0), Quaternion.identity);
+                Instantiate(coin, new Vector3(indent * i * 5, 6, 0), Quaternion.identity);
             }
             sin += 0.1f;
             yield return new WaitForSeconds(0.01f);
