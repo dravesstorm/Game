@@ -10,6 +10,11 @@ public class enemyBehaviour : MonoBehaviour
     private Rigidbody2D body;
     public float power = 2;//сила прыжка
 
+    public float GetDirection()
+    {
+        GameObject Hero = GameObject.FindWithTag("Hero");
+        return Mathf.Sign(Hero.transform.position.x - body.transform.position.x);
+    }
     void Start()
     {
         //берем молоко
@@ -19,12 +24,16 @@ public class enemyBehaviour : MonoBehaviour
 
     }
 
+
     IEnumerator Jump()
     {
+        
         //постоянно прыгает
         while (true)
         {
-            body.velocity = new Vector2(-5f * power, 5f * power);
+            Vector2 direction = new Vector2(5f * power * GetDirection(), 5f * power);
+            
+            body.velocity = direction;  
             
             //периодичность
             yield return new WaitForSeconds(Random.Range(1f, 2f));
