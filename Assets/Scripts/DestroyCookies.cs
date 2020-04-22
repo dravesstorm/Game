@@ -10,7 +10,7 @@ public class DestroyCookies : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "staticPlatform"||other.tag == "MilkEnemy")
+        if (other.tag == "staticPlatform" || other.tag == "MilkEnemy" || other.tag == "ChocolateEnemy")
             
         {
             Destroy(gameObject);

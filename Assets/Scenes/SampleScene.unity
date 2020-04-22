@@ -480,7 +480,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MilkPrefab: {fileID: 34837536352902900, guid: 7bd6b61d09014634da9068df6eb4f6f8,
     type: 3}
+  ChocPrefab: {fileID: 6385568570213965094, guid: d34a404e1f0dc324ba17b579ec6c56ec,
+    type: 3}
   cookie: {fileID: 482135038}
+  maxMilks: 4
+  maxChocs: 10
 --- !u!1 &570016139
 GameObject:
   m_ObjectHideFlags: 0

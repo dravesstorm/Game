@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 1837862548262938494}
   - component: {fileID: 114557170555133246}
   - component: {fileID: 114921794314065674}
-  - component: {fileID: 114402171011755518}
   m_Layer: 0
   m_Name: milk
   m_TagString: MilkEnemy
@@ -151,19 +150,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &114921794314065674
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 34837536352902900}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c53a8a274858d1149968240af0c35cc0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  power: 2
---- !u!114 &114402171011755518
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
