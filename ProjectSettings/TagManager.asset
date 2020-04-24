@@ -8,6 +8,9 @@ TagManager:
   - Hero
   - Weapon
   - MilkEnemy
+  - Coin
+  - ChocolateEnemy
+  - ChocPiece
   layers:
   - Default
   - TransparentFX
